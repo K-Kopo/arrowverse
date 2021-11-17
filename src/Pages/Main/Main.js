@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Main.scss";
+import { Link } from "react-router-dom";
+import CharacterCard from "../../Components/CharacterCard/CharacterCard";
 
 const Main = () => {
   const [showData, setShowData] = useState([]);
@@ -23,23 +25,22 @@ const Main = () => {
 
   }, []);
 
-  if (!showData) return <h2>Still loading....</h2>;
+  if (showData === []) return <h2>Still loading....</h2>;
   else 
   return (
+      
     <div className="main">
-        <h2>{showData.name}</h2> 
+        <h2>{showData.name}</h2>
+        <img src="https://static.tvmaze.com/uploads/images/medium_portrait/213/534017.jpg" alt="arrow poster" />
         <div>Type: {showData.type}</div>
         <div>Premiere Date: {showData.premiered}</div>
         <div>Show Ended: {showData.ended}</div>
         <div className="character">
             {castMembers.map((actor)=> {
                 return (
-                    <article >
-                    <div className="character__card">
-                <div key={actor.character.id}>{actor.character.name}</div>
-                <div>{actor.person.name}</div>
-                </div>
-                </article>
+                    <CharacterCard actor={actor}/>
+                
+                
                 )
             })}
         </div>
