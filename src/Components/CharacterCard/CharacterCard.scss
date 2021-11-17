@@ -1,42 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&family=Kings&display=swap");
 
 .character {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem;
+  &__card {
     display: flex;
-    flex-wrap: wrap;
-    margin: 2rem;
-    &__card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border-radius: 5px;
-        padding: .5rem;
-        background-color: green;
-        height: auto;
-        width: 150px;
-        margin: 1rem;
-        font-family: 'Josefin Sans', sans-serif;
-        &--char {
-            color: whitesmoke;
-            text-align: center;
-            margin-bottom: .25rem;
-            font-family: 'Josefin Sans', sans-serif;
-
-        }
-        &--person {
-            color: rgb(71, 42, 42);
-            text-align: center;
-            font-family: 'Josefin Sans', sans-serif;
-
-        }
-        &--image {
-            height: auto;
-            width: 75px;
-            margin: .5rem 0;
-            border-radius: 5px;
-        }
-        &--link {
-            text-decoration: none;
-        }
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 0.5rem;
+    background-color: green;
+    height: auto;
+    width: 150px;
+    margin: 1rem;
+    font-family: "Josefin Sans", sans-serif;
+    box-shadow: 9px 8px 5px 0px #f2e6e9;
+    &:hover {
+        box-shadow: 9px 8px 5px 0px #302e2e;
     }
+    &--char {
+      color: whitesmoke;
+      text-align: center;
+      margin-bottom: 0.25rem;
+      font-family: "Josefin Sans", sans-serif;
+    }
+    &--person {
+      color: rgb(71, 42, 42);
+      text-align: center;
+      font-family: "Josefin Sans", sans-serif;
+    }
+    &--image {
+      height: auto;
+      width: 75px;
+      margin: 0.5rem 0;
+      border-radius: 5px;
+    }
+    &--link {
+      text-decoration: none;
+    }
+  }
 }

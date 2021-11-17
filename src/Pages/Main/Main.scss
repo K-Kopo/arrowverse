@@ -30,4 +30,13 @@ body {
       font-size: 2rem;
       margin: .5rem 0;
   }
+  &__input {
+      width: 300px;
+      margin: 2rem 0;
+      height: 2rem;
+      font-family: 'Josefin Sans', sans-serif;
+      text-align: center;
+      border: 2px solid rgb(71, 42, 42);
+
+  }
 }
