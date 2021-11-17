@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&family=Kings&display=swap');
+
+.character-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://static.tvmaze.com/uploads/images/original_untouched/213/534017.jpg");
+    background-size: cover;
+    height: 100vh;
+
+  
+    &__detailsbox {
+        display: flex;
+        flex-direction: column;
+        margin-right: 3rem;
+        border: 1px solid green;
+        border-radius: 5px;
+        padding: 2rem;
+        background-color: whitesmoke;
+    }
+    &__name {
+        font-family: 'Kings', cursive;
+    }
+    &__details {
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    &__image {
+        border-radius: 5px;
+    }
+}
