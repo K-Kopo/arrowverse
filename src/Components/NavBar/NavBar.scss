@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: green;
+    padding: 0 2rem;
+    &__title {
+        color: whitesmoke;
+    }
+    &__list {
+        display: flex;
+        list-style-type: none;
+        color: whitesmoke;
+        &--links {
+            margin: .5rem;
+        }
+    }
+}
