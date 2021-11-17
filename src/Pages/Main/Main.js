@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Main.scss";
-import { Link } from "react-router-dom";
 import CharacterCard from "../../Components/CharacterCard/CharacterCard";
+import { CSVLink, CSVDownload } from "react-csv";
 
 const Main = () => {
   const [showData, setShowData] = useState(null);
   const [castMembers, setCastMembers] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+
+  const newArray = [];
+  castMembers.map((person) => newArray.push(person.person));
 
   useEffect(() => {
     axios
@@ -33,12 +36,20 @@ const Main = () => {
         <div className="main__details">Type: {showData.type}</div>
         <div className="main__details">Premiere Date: {showData.premiered}</div>
         <div className="main__details">Show Ended: {showData.ended}</div>
+
         <input
           type="text"
           className="main__input"
           placeholder="Find your favorite character"
           onChange={(event) => setSearchTerm(event.target.value)}
         />
+        <CSVLink
+          className="main__csvlink"
+          filename="arrow-cast-members"
+          data={newArray}
+        >
+          Download Cast Members as CSV
+        </CSVLink>
         <div className="character">
           {castMembers
             .filter((actor) => {
@@ -53,7 +64,7 @@ const Main = () => {
               }
             })
             .map((actor) => {
-              return <CharacterCard actor={actor} />;
+              return <CharacterCard key={actor.id} actor={actor} />;
             })}
         </div>
       </div>
