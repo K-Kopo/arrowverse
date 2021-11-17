@@ -3,6 +3,7 @@ import "./App.css";
 import NavBar from "./Components/NavBar/NavBar";
 import Characters from "./Pages/Characters/Characters";
 import Main from "./Pages/Main/Main";
+import Episodes from "./Pages/Episodes/Episodes";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/characters/:userId" element={<Characters />} />
+        <Route path="/episodes" element={<Episodes />}/>
       </Routes>
     </div>
   );

@@ -9,6 +9,9 @@
     &__title {
         color: whitesmoke;
         font-family: 'Kings', cursive;
+        text-decoration: none;
+        margin-top: 1rem;
+        font-size: 2rem;
     }
     &__list {
         display: flex;

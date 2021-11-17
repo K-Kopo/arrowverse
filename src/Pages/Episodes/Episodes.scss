@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&family=Kings&display=swap");
+
+.episode-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("https://static.tvmaze.com/uploads/images/original_untouched/213/534017.jpg");
+  background-size: cover;
+//   height: 100vh;
+  &__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      height: 10rem;
+      width: 10rem;
+      background-color: whitesmoke;
+      font-family: 'Josefin-sans', sans-serif;
+      margin: 1rem;
+      padding: 1rem;
+  }
+  &__cardbox {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  &__titles {
+      font-family: 'Josefin Sans', sans-serif;
+      text-align: center;
+  }
+  &__links {
+      font-family: 'Josefin Sans', sans-serif;
+      text-align: center;
+      text-decoration: none;
+  }
+}
+
+.episode-selector {
+  height: 2rem;
+  width: 10rem;
+  margin-bottom: 2rem;
+  &__label {
+    font-family: "Kings", cursive;
+    font-size: 3rem;
+    margin: 1.5rem;
+    color: whitesmoke;
+  }
+}
