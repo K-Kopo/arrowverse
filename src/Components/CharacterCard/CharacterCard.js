@@ -5,7 +5,7 @@ import "./CharacterCard.scss";
 const CharacterCard = ({ actor }) => {
   const id = actor.person.id;
   return (
-    <div >
+    <div>
       <Link className="character__card--link" to={`/characters/${id}`}>
         <div className="character__card">
           <div className="character__card--char" key={actor.character.id}>

@@ -20,7 +20,9 @@ const Episodes = () => {
 
   return (
     <div className="episode-page">
-      <label className="episode-selector__label" for="episode-select">Pick a season</label>
+      <label className="episode-selector__label" for="episode-select">
+        Pick a season
+      </label>
 
       <select
         className="episode-selector"
@@ -51,7 +53,9 @@ const Episodes = () => {
             return (
               <div className="episode-page__card" key={episodes.id}>
                 <h2 className="episode-page__titles">{episodes.name}</h2>
-                <a className="episode-page__links" href={episodes.url}>Read More on TVMaze</a>
+                <a className="episode-page__links" href={episodes.url}>
+                  Read More on TVMaze
+                </a>
               </div>
             );
           })}

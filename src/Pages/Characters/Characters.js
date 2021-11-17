@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import "./Characters.scss";
 
 const Characters = () => {
-    
   const { userId } = useParams();
   const [singleActor, setSingleActor] = useState(null);
 
@@ -13,7 +12,6 @@ const Characters = () => {
       .get(`https://api.tvmaze.com/people/${userId}`)
       .then((response) => {
         setSingleActor(response.data);
-        console.log(response.data);
       })
       .catch((error) => console.log(error));
   }, [userId]);
@@ -25,12 +23,16 @@ const Characters = () => {
   return (
     <div className="character-page">
       <div className="character-page__detailsbox">
-      <h1 className="character-page__name">{name}</h1>
-      <p className="character-page__details">{country.name}</p>
-      <p className="character-page__details">{birthday}</p>
-      <p className="character-page__details">{gender}</p>
+        <h1 className="character-page__name">{name}</h1>
+        <p className="character-page__details">{country.name}</p>
+        <p className="character-page__details">{birthday}</p>
+        <p className="character-page__details">{gender}</p>
       </div>
-      <img className="character-page__image"src={image.medium} alt="actor pic" />
+      <img
+        className="character-page__image"
+        src={image.medium}
+        alt="actor pic"
+      />
     </div>
   );
 };

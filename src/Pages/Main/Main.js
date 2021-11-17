@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Main.scss";
 import CharacterCard from "../../Components/CharacterCard/CharacterCard";
-import { CSVLink, CSVDownload } from "react-csv";
+import { CSVLink } from "react-csv";
 
 const Main = () => {
   const [showData, setShowData] = useState(null);
