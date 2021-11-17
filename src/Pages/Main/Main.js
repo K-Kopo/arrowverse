@@ -30,11 +30,10 @@ const Main = () => {
   return (
       
     <div className="main">
-        <h2>{showData.name}</h2>
-        <img src="https://static.tvmaze.com/uploads/images/medium_portrait/213/534017.jpg" alt="arrow poster" />
-        <div>Type: {showData.type}</div>
-        <div>Premiere Date: {showData.premiered}</div>
-        <div>Show Ended: {showData.ended}</div>
+        <h2 className="main__title">{showData.name}</h2>
+        <div className="main__details">Type: {showData.type}</div>
+        <div className="main__details">Premiere Date: {showData.premiered}</div>
+        <div className="main__details">Show Ended: {showData.ended}</div>
         <div className="character">
             {castMembers.map((actor)=> {
                 return (

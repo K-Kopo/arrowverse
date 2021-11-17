@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&family=Kings&display=swap');
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -5,13 +7,19 @@
     padding: 0 2rem;
     &__title {
         color: whitesmoke;
+        font-family: 'Kings', cursive;
     }
     &__list {
         display: flex;
         list-style-type: none;
         color: whitesmoke;
         &--links {
+            font-family: 'Josefin Sans', sans-serif;
             margin: .5rem;
+            text-decoration: none;
+            &:visited {
+                color: whitesmoke;
+            }
         }
     }
 }

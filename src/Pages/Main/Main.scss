@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&family=Kings&display=swap");
 *,
 *:before,
 *:after {
@@ -12,32 +13,21 @@ body {
 }
 
 .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: black;
-  
-}
-.character {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 2rem;
-    &__card {
-        border-radius: 5px;
-        padding: .5rem;
-        background-color: green;
-        height: 200px;
-        width: 100px;
-        margin: 1rem;
-        &--char {
-            color: whitesmoke;
-            text-align: center;
-            margin-bottom: .25rem;
-        }
-        &--person {
-            color: red;
-            text-align: center;
-        }
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  background-image: url("https://static.tvmaze.com/uploads/images/original_untouched/213/534017.jpg");
+  background-size: cover;
+  &__title {
+    font-size: 8rem;
+    font-family: "Kings", cursive;
+    margin: 2rem 0;
+  }
+  &__details {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 2rem;
+      margin: .5rem 0;
+  }
 }
